@@ -2,8 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Splash, Akun, Pesanan } from '../pages';
 import { BottomNavigator } from '../components/';
+import { Account, History, Account } from '../pages/pages';
+import Dashboard from '../pages/dashboard';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -11,9 +12,9 @@ const Tab = createBottomTabNavigator();
 const MainApp = () => {
   return (
     <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="History" component={Pesanan} />
-        <Tab.Screen name="Profile" component={Akun} />
+        <Tab.Screen name="Dashboard" component={Dashboard} />
+        <Tab.Screen name="History" component={History} />
+        <Tab.Screen name="Account" component={Account} />
       </Tab.Navigator>
   );
 };

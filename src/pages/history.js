@@ -9,6 +9,6 @@ const History = () => {
     )
 }
 
-export default Pesanan
+export default History
 
 const styles = StyleSheet.create({})
